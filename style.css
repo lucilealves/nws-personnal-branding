@@ -1,10 +1,11 @@
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+}
+img {
+  max-width: 100%;
 }
 
 section {
-  background: salmon;
   margin: auto;
   width: 90%;
   max-width: 940px;
@@ -28,17 +29,155 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+header,
+.galerie {
   margin: auto;
   width: 90%;
   max-width: 1340px;
 }
 
+.page-heading {
+  flex-direction: column;
+}
+
 h1 {
   text-align: center;
   font-size: 34px;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #666666;
+  font-size: 15px;
+  margin-top: -1%;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+}
+
+.galerie > * {
+  width: 218px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.photolucile {
+  width: 570px;
+  height: auto;
+}
+
+h3 {
+  font-size: 34px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
 
 p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.logofooter {
+  width: 60px;
+  height: auto;
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+}
+
+#a-propos {
+  border-top: 1px solid #666666;
+  margin-top: 40px;
+}
+
+.competence {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.competence img {
+  justify-self: center;
+}
+
+.competence .col {
   text-align: center;
+}
+.competence img {
+  width: 50px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.titrecompetence {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.titrecompetence > * {
+  width: 50px;
+  max-width: 100%;
+  margin: auto;
+}
+
+#realisation {
+  text-align: center;
+}
+
+@media screen and (min-width: 940px) {
+  #a-propos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+.forecast {
+  margin: 30rem;
+  padding: 0.3rem;
+  background-color: #d3ccc4;
+  font: 1rem "Open Sans", sans-serif;
+  text-align: justify;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/media/examples/rain.svg") #d3ccc4;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+
+.menu {
+  color: black;
+  text-decoration: none;
 }
