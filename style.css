@@ -10,7 +10,7 @@ section {
   width: 90%;
   max-width: 940px;
 }
-
+/* elements du header*/
 .logo {
   width: 60px;
   height: auto;
@@ -38,6 +38,14 @@ header,
   max-width: 1340px;
 }
 
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 21px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* entête spéciale avec mon nom et ma spécialité*/
 .page-heading {
   flex-direction: column;
 }
@@ -57,7 +65,7 @@ h2 {
   font-size: 15px;
   margin-top: -1%;
 }
-
+/* elements qui ont crées ma galerie de 3 photos */
 .galerie {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -70,10 +78,15 @@ h2 {
   max-width: 100%;
   margin: auto;
 }
-
+/* elements de présentation qui comprend ma photo et mon texte */
 .photolucile {
   width: 570px;
   height: auto;
+}
+
+#a-propos {
+  border-top: 1px solid #666666;
+  margin-top: 40px;
 }
 
 h3 {
@@ -97,11 +110,15 @@ h4 {
   font-size: 25px;
 }
 
-#a-propos {
-  border-top: 1px solid #666666;
-  margin-top: 40px;
+@media screen and (min-width: 940px) {
+  #a-propos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
 }
 
+/* compétences sous forme de grille et d'icônes*/
 .competence {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -143,41 +160,26 @@ h4 {
   text-align: center;
 }
 
-@media screen and (min-width: 940px) {
-  #a-propos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
+.competence img {
+  width: 50px;
+  max-width: 100%;
+  margin: auto;
 }
 
-.menu li a {
-  color: black;
-  text-decoration: none;
-  font-size: 21px;
-  font-family: "Open Sans", sans-serif;
-}
-
-.rgpd li a {
+/* Style du lien des crédits et mentions légales*/
+.rgpd ul li a {
   color: #b7818;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
-}
-
-.copyright {
-  background-color: #524a4b;
-  color: white;
-  font-size: 12px;
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 20px;
+  list-style: none;
 }
 
 h4 {
   text-align: center;
 }
 
+/* partie des 3 articles*/
 .article {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -193,11 +195,6 @@ h4 {
 
 .article .col {
   text-align: center;
-}
-.competence img {
-  width: 50px;
-  max-width: 100%;
-  margin: auto;
 }
 
 .article {
@@ -218,9 +215,4 @@ h4 {
 .article {
   text-align: justify;
   font-size: 15px;
-}
-
-h5 {
-  text-align: left;
-  font-size: 20px;
 }
